@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/contact', to: 'static_pages#contact'
 
+  post '/contact/send', to: 'static_pages#send_contact_mail'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

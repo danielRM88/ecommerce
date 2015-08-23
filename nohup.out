@@ -1,0 +1,166 @@
+=> Booting WEBrick
+=> Rails 4.2.0 application starting in development on http://localhost:3000
+=> Run `rails server -h` for more startup options
+=> Ctrl-C to shutdown server
+[2015-08-23 00:39:07] INFO  WEBrick 1.3.1
+[2015-08-23 00:39:07] INFO  ruby 2.2.0 (2014-12-25) [x86_64-darwin14]
+[2015-08-23 00:39:07] INFO  WEBrick::HTTPServer#start: pid=65695 port=3000
+
+
+Started GET "/contact" for 127.0.0.1 at 2015-08-23 00:39:17 +0100
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (1.1ms)
+  Rendered shared/_navigation.html.erb (3.2ms)
+Completed 200 OK in 288ms (Views: 280.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.self-f383123c6c6409d2be4c2ea213afae57f96ec3841702b62eef676ceb807aeda6.css?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/application.self-0fedba0d6142bcb3fc962984053f487e890325fe7391a323330abffa7ac9e374.css?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/application.self-f98a0dd27ad1c55b2b9cfe97296d4887e5d4a4535b3bbbf9130c1050771738b2.js?body=1" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started GET "/assets/logo-1eccb86059eadc68a6183d7b0cbeb03b21defc0e7caa170dbc66beb7763c0ec9.jpg" for 127.0.0.1 at 2015-08-23 00:39:18 +0100
+
+
+Started POST "/contact/send" for 127.0.0.1 at 2015-08-23 00:39:22 +0100
+Processing by StaticPagesController#send_contact_mail as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xwrOILGPCHb1LMzuEBY7eoNYWSUUzF3nJQO61mTo8k2e66kaX04SYG4RIasdge3wFLfe4GBQ4KbFHAko11wwgw=="}
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use `#deliver_now` to deliver immediately or `#deliver_later` to deliver through Active Job. (called from send_contact_mail at /Users/danielrosato/Documents/Upwork/ecommerce/app/controllers/static_pages_controller.rb:12)
+  Rendered user_mailer/contact.html within layouts/mailer (0.5ms)
+
+UserMailer#contact: processed outbound mail in 129.9ms
+
+Sent mail to rosato.daniel@gmail.com (43.2ms)
+Date: Sun, 23 Aug 2015 00:39:23 +0100
+From: no-reply@gmail.com
+To: rosato.daniel@gmail.com
+Message-ID: <55d9082b23842_1009f3fdd6a6cf7a06676e@MacBookPro.local.mail>
+Subject: Contact email
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi </h1>
+    <p>
+      Contact mail sent using smtp.
+    </p>
+    <p>Test Mail</p>
+  </body>
+</html>
+  </body>
+</html>
+
+Completed 500 Internal Server Error in 190ms
+
+SocketError (getaddrinfo: nodename nor servname provided, or not known):
+  app/controllers/static_pages_controller.rb:12:in `send_contact_mail'
+
+
+  Rendered /Users/danielrosato/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/danielrosato/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/danielrosato/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/danielrosato/.rvm/gems/ruby-2.2.0@global/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.4ms)
+  Rendered /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.9ms)
+  Rendered /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (84.8ms)
+[2015-08-23 00:39:26] INFO  going to shutdown ...
+Exiting
+/Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/rack-1.6.4/lib/rack/handler/webrick.rb:48:in `shutdown': undefined method `shutdown' for nil:NilClass (NoMethodError)
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/rack-1.6.4/lib/rack/server.rb:280:in `block in start'
+	from /Users/danielrosato/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:206:in `call'
+	from /Users/danielrosato/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:206:in `join'
+	from /Users/danielrosato/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:206:in `block (2 levels) in start'
+	from /Users/danielrosato/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:206:in `each'
+	from /Users/danielrosato/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:206:in `block in start'
+	from /Users/danielrosato/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:32:in `start'
+	from /Users/danielrosato/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:162:in `start'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/rack-1.6.4/lib/rack/handler/webrick.rb:34:in `run'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/rack-1.6.4/lib/rack/server.rb:286:in `start'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/commands/server.rb:80:in `start'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:80:in `block in server'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:75:in `tap'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:75:in `server'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@global/gems/railties-4.2.0/lib/rails/commands.rb:17:in `<top (required)>'
+	from /Users/danielrosato/Documents/Upwork/ecommerce/bin/rails:8:in `require'
+	from /Users/danielrosato/Documents/Upwork/ecommerce/bin/rails:8:in `<top (required)>'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/spring-1.3.6/lib/spring/client/rails.rb:28:in `load'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/spring-1.3.6/lib/spring/client/rails.rb:28:in `call'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/spring-1.3.6/lib/spring/client/command.rb:7:in `call'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/spring-1.3.6/lib/spring/client.rb:26:in `run'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/spring-1.3.6/bin/spring:48:in `<top (required)>'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/spring-1.3.6/lib/spring/binstub.rb:11:in `load'
+	from /Users/danielrosato/.rvm/gems/ruby-2.2.0@ink/gems/spring-1.3.6/lib/spring/binstub.rb:11:in `<top (required)>'
+	from /Users/danielrosato/Documents/Upwork/ecommerce/bin/spring:13:in `require'
+	from /Users/danielrosato/Documents/Upwork/ecommerce/bin/spring:13:in `<top (required)>'
+	from bin/rails:3:in `load'
+	from bin/rails:3:in `<main>'

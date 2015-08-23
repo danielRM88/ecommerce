@@ -1,2 +1,14 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<h1>Contact Us</h1>
+<p>We would love to hear what you think!</p>
+
+<div class="row">
+	<div class="col-md-6">
+		<%= form_tag('/contact/send', method: :post) do %>
+			<div class="form-group">
+				<label for="msg">Write your thoughts</label>
+				<textarea name="msg" class="form-control"></textarea>
+			</div>
+			<input type="submit" value="Send message" class="btn btn-default">
+		<% end %>
+	</div>
+</div>
