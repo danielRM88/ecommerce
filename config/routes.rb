@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :categories
+
+  resources :products do
+    get '/add_to_basket', to: 'products#add_to_basket'
+  end
+
   root 'static_pages#home'
 
   get '/home', to: 'static_pages#home'
