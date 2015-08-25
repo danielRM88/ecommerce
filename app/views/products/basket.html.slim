@@ -1,0 +1,30 @@
+- total = 0
+.row
+  .panel.panel-default
+    .panel-heading Basket
+    .panel-body
+      - if @products.count > 0
+        - @products.each do |product|
+          .col-sm-4.col-md-3
+            .panel.panel-primary.thumbnail
+              = image_tag product.url, size: '242x200'
+              .caption
+                - total += product.price
+                h3
+                  = product.name
+                p
+                  = product.price
+                  | $
+                p
+                  = link_to "Info", product, class: "btn btn-primary"
+                  | &nbsp;
+                  = link_to "Remove", product_remove_from_basket_path(product), class: "btn btn-danger"
+        .col-xs-12.text-right
+          | Total:
+          strong = total
+          | $
+      - else
+        h3 There is nothing in your basket!
+.row.text-center
+  - if @products.count > 0
+    = link_to "Proceed to checkout", products_path, class: "btn btn-primary"

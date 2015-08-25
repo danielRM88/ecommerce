@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title Ecommerce
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    .mywrapper
+      #main-container.container
+        .row
+          .col-md-12
+            = render 'shared/flash_messages'
+            div style=("margin-bottom: 20px;") 
+              = render 'shared/navigation'
+            = yield

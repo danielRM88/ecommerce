@@ -1,0 +1,21 @@
+.row
+  .panel.panel-default
+    .panel-heading Gallery
+    .panel-body
+      - @products.each do |product|
+        .col-sm-4.col-md-3
+          .panel.panel-primary.thumbnail
+            = image_tag product.url, size: '242x200'
+            .caption
+              h3= product.name
+              p
+                = product.price
+                | $
+              p
+                = product.description
+              p
+                = link_to "Info", product, class: "btn btn-primary"
+                | &nbsp;
+                = link_to "Add to basket", product_add_to_basket_path(product), class: "btn btn-warning"
+.row.text-center
+  = will_paginate @products, renderer: BootstrapPagination::Rails
