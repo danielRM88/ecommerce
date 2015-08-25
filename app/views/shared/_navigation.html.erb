@@ -32,7 +32,7 @@
 		        <li><a href="/products">Checkout</a></li>
 		      </ul>
 		      <ul class="nav navbar-nav navbar-right">
-			      <li><a href="/contact">Basket</a></li>
+			      <li><a href="/basket">Basket <strong class="text-danger">(<%= session[:basket].count > 0 ? session[:basket].count : '0' %>)</strong></a></li>
 		        <li><a href="/contact">Contact Us</a></li>
 		        <li><a href="/about">About Us</a></li>
 		      </ul>

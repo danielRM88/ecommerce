@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   resources :products do
     get '/add_to_basket', to: 'products#add_to_basket'
+    get '/remove_from_basket', to: 'products#remove_from_basket'
   end
+  get '/basket', to: 'products#basket'
 
   root 'static_pages#home'
 

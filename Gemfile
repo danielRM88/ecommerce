@@ -30,6 +30,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 
+gem 'simple_form'
+
+gem 'slim-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

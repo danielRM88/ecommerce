@@ -70,6 +70,18 @@ class ProductsController < ApplicationController
     redirect_to products_path
   end
 
+  def remove_from_basket
+    session[:basket] -= [params[:product_id].to_i]
+    redirect_to :basket
+  end
+
+  def basket
+    @products = []
+    session[:basket].each do |id|
+      @products << Product.find(id)
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product

@@ -4,12 +4,23 @@
   <div class="panel panel-default">
     <div class="panel-heading">Gallery</div>
     <div class="panel-body">
+      <!-- <div class="form-horizontal col-xs-12 text-center">
+        <label class="label-control col-xs-2">Show Products in:</label>
+        <div class="col-xs-10">
+        <select class="col-xs-6">
+          <option>Electronics</option>
+          <option>Outdoor</option>
+        </select>
+        </div>
+      </div> -->
+      <br>
+      <br>
       <% @products.each do |product| %>
         <div class="col-sm-4 col-md-3">
           <div class="panel panel-primary thumbnail">
             <%= image_tag product.url, size: '242x200' %>
             <div class="caption">
-              <h3><%= product.name %></h3>
+              <h3><%= product.name %></h3> <p><%= product.price %> $</p>
               <p><%= product.description %></p>
               <p>
                 <%= link_to "Info", product, class: "btn btn-primary" %>
