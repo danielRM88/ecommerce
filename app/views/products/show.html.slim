@@ -1,13 +1,20 @@
-p#notice= notice
-p
-  strong Name:
-  = @product.name
-p
-  strong Description:
-  = @product.description
-p
-  strong Price:
-  = @product.price
-= link_to 'Edit', edit_product_path(@product)
-| \
-= link_to 'Back', products_path
+.row
+  .panel.panel-default
+    .panel-heading 
+      | Product: 
+      = @product.name
+    .panel-body
+      .col-xs-12.col-md-3
+          .panel.panel-primary.thumbnail
+            = image_tag @product.url, size: '242x200'
+      p.col-xs-12.col-md-9
+        = @product.description
+      p.col-xs-12
+        | Price: 
+        strong
+          = @product.price
+        |&nbsp;$
+      .col-xs-12
+        = link_to "Back to Gallery", products_path, class: "btn btn-primary"
+        | &nbsp;
+        = link_to "Add to basket", product_add_to_basket_path(@product), class: "btn btn-warning"

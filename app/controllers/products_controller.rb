@@ -4,7 +4,11 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all.paginate(page: params[:page], per_page: 20)
+    @category_id = params[:category][:category_id] unless params[:category].blank?
+    @products = Product.all
+    @products = @products.with_category_id(@category_id) unless @category_id.blank?
+    @products = @products.paginate(page: params[:page], per_page: 20)
+    @categories = Category.all
   end
 
   # GET /products/1
@@ -67,7 +71,7 @@ class ProductsController < ApplicationController
     session[:basket] << @product.id unless session[:basket].include? @product.id
 
     flash[:notice] = "Product added to your basket"
-    redirect_to products_path
+    redirect_to :back
   end
 
   def remove_from_basket

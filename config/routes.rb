@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get '/remove_from_basket', to: 'products#remove_from_basket'
   end
   get '/basket', to: 'products#basket'
+  post '/filter', to: 'products#filter'
 
   root 'static_pages#home'
 

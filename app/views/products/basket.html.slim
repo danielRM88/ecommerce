@@ -14,7 +14,7 @@
                   = product.name
                 p
                   = product.price
-                  | $
+                  | &nbsp;$
                 p
                   = link_to "Info", product, class: "btn btn-primary"
                   | &nbsp;
@@ -22,7 +22,7 @@
         .col-xs-12.text-right
           | Total:
           strong = total
-          | $
+          | &nbsp;$
       - else
         h3 There is nothing in your basket!
 .row.text-center

@@ -2,6 +2,13 @@
   .panel.panel-default
     .panel-heading Gallery
     .panel-body
+      = simple_form_for :category, url: products_path, :method => :get do |f|
+        .col-xs-12
+          = f.label "Catergories:", required: false
+        .col-xs-6
+          = f.input :category_id, collection: @categories.pluck(:name, :id), selected: @category_id, label: false, include_blank: "All"
+        = f.submit "Filter", class: 'btn btn-primary'
+      br
       - @products.each do |product|
         .col-sm-4.col-md-3
           .panel.panel-primary.thumbnail
@@ -10,9 +17,9 @@
               h3= product.name
               p
                 = product.price
-                | $
+                | &nbsp;$
               p
-                = product.description
+                = product.description[0..200]
               p
                 = link_to "Info", product, class: "btn btn-primary"
                 | &nbsp;
