@@ -40,7 +40,7 @@ products = Product.create([{name: 'Iphone 7', description: 'Cool Cell Phone. Lor
                                                             Powder brownie tart macaroon danish carrot cake lemon drops. Caramels halvah cake. 
                                                             Cheesecake biscuit powder chocolate. Liquorice wafer cupcake pudding biscuit brownie 
                                                             muffin cookie jelly beans. Jelly-o danish sweet ice cream ice cream. Cotton candy 
-                                                            gummies pastry carrot cake candy canes. Donut sweet roll liquorice gummi bears cake.'
+                                                            gummies pastry carrot cake candy canes. Donut sweet roll liquorice gummi bears cake.', price: 450, category_id: 1, url: 'ipad2.png'},
                             {name: 'Loanmoaner', description: 'Deadly. Lorem ipsum dolor sit amet, 
                                                             Cake soufflé chupa chups bonbon. Cotton candy sweet croissant cookie cake tootsie roll 
                                                             eu pri vidisse quaerendum, aeque dissentias vis in, pri accusam atomorum at. 
