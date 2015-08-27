@@ -81,8 +81,10 @@ class ProductsController < ApplicationController
 
   def basket
     @products = []
-    session[:basket].each do |id|
-      @products << Product.find(id)
+    unless session[:basket].blank?
+      session[:basket].each do |id|
+        @products << Product.find(id)
+      end
     end
   end
 

@@ -30,7 +30,7 @@
               a href="/basket" 
                 | Basket
                 strong.text-danger
-                  |&nbsp;(#{session[:basket].count > 0 ? session[:basket].count : '0'})
+                  |&nbsp;(#{session[:basket].blank? ? '0' : (session[:basket].count > 0 ? session[:basket].count : '0')})
             li
               a href="/contact"  Contact Us
             li
