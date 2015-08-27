@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  root 'static_pages#home'
 
   resources :categories
 
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
   get '/basket', to: 'products#basket'
   post '/filter', to: 'products#filter'
 
-  root 'static_pages#home'
+  get '/checkout', to: 'checkouts#start'
 
   get '/home', to: 'static_pages#home'
 
