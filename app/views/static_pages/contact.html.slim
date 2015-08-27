@@ -1,0 +1,9 @@
+h1 Contact Us
+p We would love to hear what you think!
+.row
+  .col-md-6
+    = form_tag('/contact/send', method: :post) do
+      .form-group
+        label for="msg"  Write your thoughts
+        textarea.form-control name="msg" 
+      input.btn.btn-default type="submit" value=("Send message") /
