@@ -31,6 +31,6 @@
             |&nbsp;$
         br
         .col-xs-12.text-right
-          = link_to "Proceed", products_path, class: "btn btn-primary"  
+          = button_to "Proceed", checkout_path, method: :post, class: "btn btn-primary"  
       - else
         .h3 There is nothing in your basket!

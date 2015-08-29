@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   post '/filter', to: 'products#filter'
 
   get '/checkout', to: 'checkouts#start'
+  post '/checkout', to: 'checkouts#create'
+  get '/finish', to: 'checkouts#finish'
+  post "/hook" => "checkouts#hook"
 
   get '/home', to: 'static_pages#home'
 
