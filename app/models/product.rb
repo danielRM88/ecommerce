@@ -15,5 +15,7 @@
 class Product < ActiveRecord::Base
   belongs_to :category
 
+  delegate :name, to: :category, prefix: true
+
   scope :with_category_id, -> (category_id) { where(category_id: category_id) }
 end

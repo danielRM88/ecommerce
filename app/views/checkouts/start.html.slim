@@ -1,0 +1,36 @@
+.row
+  .panel.panel-default
+    .panel-heading Checkout
+    .panel-body
+      - if @products.count > 0
+        .panel.panel-primary
+          table.table.table-bordered.table-hover
+            thead
+              th Product
+              th Name
+              th Category
+              th Price
+            tbody
+              - total = 0
+              - @products.each do |product|
+                - total += product.price
+                tr
+                  td
+                    = image_tag product.url, size: '78x64'
+                  td
+                    = product.name 
+                  td
+                    = product.category_name
+                  td.text-right
+                    = product.price
+                    |&nbsp;$
+        h4.text-right
+          strong 
+            | Order total: 
+            = total
+            |&nbsp;$
+        br
+        .col-xs-12.text-right
+          = button_to "Proceed", checkout_path, method: :post, class: "btn btn-primary"  
+      - else
+        .h3 There is nothing in your basket!
