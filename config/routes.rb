@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   
   root 'static_pages#home'
 
-  resources :categories
+  # resources :categories
 
-  resources :products do
+  resources :products, only: [:index, :show] do
     get '/add_to_basket', to: 'products#add_to_basket'
     get '/remove_from_basket', to: 'products#remove_from_basket'
   end

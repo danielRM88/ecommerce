@@ -21,7 +21,7 @@ class CheckoutsController < ApplicationController
 
   def finish
     session[:basket] = []
-    flash[:success] = "Your payment was completed successfully. Thank you for shopping with us."
+    flash[:success] = "Your order was successfully submitted. Thank you for shopping with us."
     redirect_to root_path
   end
 end
