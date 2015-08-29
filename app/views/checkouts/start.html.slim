@@ -9,11 +9,13 @@
               th Product
               th Name
               th Category
+              th Amount
               th Price
+              th Total
             tbody
               - total = 0
               - @products.each do |product|
-                - total += product.price
+                - total += product.price * product.amount
                 tr
                   td
                     = image_tag product.url, size: '78x64'
@@ -22,7 +24,12 @@
                   td
                     = product.category_name
                   td.text-right
+                    = product.amount
+                  td.text-right
                     = product.price
+                    |&nbsp;$
+                  td.text-right
+                    = product.price * product.amount
                     |&nbsp;$
         h4.text-right
           strong 

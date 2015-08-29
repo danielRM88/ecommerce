@@ -10,19 +10,22 @@
         = f.submit "Filter", class: 'btn btn-primary'
       br
       - @products.each do |product|
-        .col-sm-4.col-md-3
-          .panel.panel-primary.thumbnail
-            = image_tag product.url, size: '242x200'
-            .caption
-              h3= product.name
-              p
-                = product.price
-                | &nbsp;$
-              p
-                = product.description[0..200]
-              p
-                = link_to "Info", product, class: "btn btn-primary"
-                | &nbsp;
-                = link_to "Add to basket", product_add_to_basket_path(product), class: "btn btn-warning"
+        = simple_form_for :product, url: product_add_to_basket_path(product), method: :post do |f|
+          .col-sm-4.col-md-3
+            .panel.panel-primary.thumbnail
+              = image_tag product.url, size: '242x200'
+              .caption
+                h3= product.name
+                p
+                  = product.price
+                  | &nbsp;$
+                p
+                  = product.description[0..200]
+                  = f.input :amount, input_html: { value: 1 }
+                p
+                  = link_to "Info", product, class: "btn btn-primary"
+                  | &nbsp;
+                  / = link_to "Add to basket", product_add_to_basket_path(product), class: "btn btn-warning"
+                  = f.submit "Add to Basket", class: "btn btn-warning"
 .row.text-center
   = will_paginate @products, renderer: BootstrapPagination::Rails

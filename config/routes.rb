@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # resources :categories
 
   resources :products, only: [:index, :show] do
-    get '/add_to_basket', to: 'products#add_to_basket'
+    post '/add_to_basket', to: 'products#add_to_basket'
     get '/remove_from_basket', to: 'products#remove_from_basket'
   end
   get '/basket', to: 'products#basket'

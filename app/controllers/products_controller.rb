@@ -67,23 +67,30 @@ class ProductsController < ApplicationController
 
   def add_to_basket
     @product = Product.find(params[:product_id])
+    amount = params[:product][:amount].to_i
     session[:basket] ||= []
-    session[:basket] << @product.id unless session[:basket].include? @product.id
-
-    flash[:notice] = "Product added to your basket"
+    unless amount.blank? || amount == 0
+      session[:basket].delete_if {|hash| hash["id"] == params[:product_id].to_i }
+      session[:basket] << {id: @product.id, amount: amount} unless session[:basket].include? @product.id
+      flash[:notice] = "Product added to your basket"
+    else
+      flash[:error] = "No amount selected"
+    end
     redirect_to :back
   end
 
   def remove_from_basket
-    session[:basket] -= [params[:product_id].to_i]
+    session[:basket].delete_if {|hash| hash["id"] == params[:product_id].to_i } unless session[:basket].blank?
     redirect_to :basket
   end
 
   def basket
     @products = []
     unless session[:basket].blank?
-      session[:basket].each do |id|
-        @products << Product.find(id)
+      session[:basket].each do |p|
+        product = Product.find(p["id"])
+        product.amount = p["amount"].to_i
+        @products << product
       end
     end
   end

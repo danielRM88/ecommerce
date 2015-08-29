@@ -2,21 +2,25 @@ class CheckoutsController < ApplicationController
   def start
     @products = []
     unless session[:basket].blank?
-      session[:basket].each do |id|
-        @products << Product.find(id)
+      session[:basket].each do |p|
+        product = Product.find(p["id"])
+        product.amount = p["amount"].to_i
+        @products << product
       end
     end
   end
 
   def create
     amount = 0
+    products = []
     unless session[:basket].blank?
-      session[:basket].each do |id|
-        product = Product.find(id)
-        amount += product.price
+      session[:basket].each do |p|
+        product = Product.find(p["id"])
+        product.amount = p["amount"].to_i
+        products << product
       end
     end
-    redirect_to CheckoutHandler.paypal_url(finish_path, amount)
+    redirect_to CheckoutHandler.paypal_url(finish_path, products)
   end
 
   def finish

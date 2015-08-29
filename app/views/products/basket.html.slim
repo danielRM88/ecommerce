@@ -9,11 +9,19 @@
             .panel.panel-primary.thumbnail
               = image_tag product.url, size: '242x200'
               .caption
-                - total += product.price
+                - total += (product.price * product.amount)
                 h3
                   = product.name
                 p
+                  |Price: 
                   = product.price
+                  | &nbsp;$
+                p
+                  |Amount: 
+                  = product.amount
+                p
+                  |Total: 
+                  = (product.price * product.amount)
                   | &nbsp;$
                 p
                   = link_to "Info", product, class: "btn btn-primary"
